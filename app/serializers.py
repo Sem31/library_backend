@@ -14,7 +14,9 @@ class CreateUserSerializer(serializers.ModelSerializer):
         user_obj = User(
             username=data.get('username'),
             phone = data.get('phone'),
-            email=data.get('email')
+            email=data.get('email'),
+            address = data.get('address'),
+            profile = data.get('profile'),
         )
         user_obj.set_password(data.get('password'))
         user_obj.is_active = True
